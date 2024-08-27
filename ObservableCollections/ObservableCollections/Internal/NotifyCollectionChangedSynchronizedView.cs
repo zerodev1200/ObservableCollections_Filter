@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Collections.Specialized;
 using System.ComponentModel;
+using System.Linq;
 
 namespace ObservableCollections.Internal
 {
@@ -25,7 +26,7 @@ namespace ObservableCollections.Internal
             parent.AttachFilter(this);
         }
 
-        public int Count => parent.Count;
+        public virtual int Count => parent.Count;
 
         public event NotifyCollectionChangedEventHandler? CollectionChanged;
         public event PropertyChangedEventHandler? PropertyChanged;
@@ -152,7 +153,8 @@ namespace ObservableCollections.Internal
             {
                 lock (view.SyncRoot)
                 {
-                    return view.list[index].Item2;
+                    //return view.list[index].Item2;
+                    return view.ElementAt(index).View;
                 }
             }
             set => throw new NotSupportedException();
@@ -165,6 +167,17 @@ namespace ObservableCollections.Internal
                 return this[index];
             }
             set => throw new NotSupportedException();
+        }
+        public override int Count
+        {
+            get
+            {
+                lock (view.SyncRoot)
+                {
+                    //view.Count always returns the value before filtering 
+                    return view.Count();
+                }
+            }
         }
 
         static bool IsCompatibleObject(object? value)

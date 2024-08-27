@@ -9,9 +9,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ObservableCollections" Version="2.2.1" />
+    <!--<PackageReference Include="ObservableCollections" Version="2.2.1" />-->
     <!--<PackageReference Include="ObservableCollections" Version="2.1.4" />-->
     <PackageReference Include="R3Extensions.WPF" Version="1.2.8" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ObservableCollections\ObservableCollections\ObservableCollections.csproj" />
   </ItemGroup>
 
 </Project>

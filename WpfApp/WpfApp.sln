@@ -5,6 +5,8 @@ VisualStudioVersion = 17.10.35122.118
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp", "WpfApp.csproj", "{FC377BA0-2BEC-43CF-AB5E-31AE5CE5970A}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObservableCollections", "..\ObservableCollections\ObservableCollections\ObservableCollections.csproj", "{6BD56FC1-7D0D-4D95-BD07-AC48999FB988}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{FC377BA0-2BEC-43CF-AB5E-31AE5CE5970A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FC377BA0-2BEC-43CF-AB5E-31AE5CE5970A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FC377BA0-2BEC-43CF-AB5E-31AE5CE5970A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6BD56FC1-7D0D-4D95-BD07-AC48999FB988}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BD56FC1-7D0D-4D95-BD07-AC48999FB988}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BD56FC1-7D0D-4D95-BD07-AC48999FB988}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BD56FC1-7D0D-4D95-BD07-AC48999FB988}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

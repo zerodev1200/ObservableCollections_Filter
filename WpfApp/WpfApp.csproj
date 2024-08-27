@@ -1,0 +1,17 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ObservableCollections" Version="2.2.1" />
+    <!--<PackageReference Include="ObservableCollections" Version="2.1.4" />-->
+    <PackageReference Include="R3Extensions.WPF" Version="1.2.8" />
+  </ItemGroup>
+
+</Project>

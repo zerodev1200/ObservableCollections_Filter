@@ -132,6 +132,11 @@ namespace ObservableCollections.Internal
                 self.PropertyChanged?.Invoke(self, CountPropertyChangedEventArgs);
             }
         }
+
+        public void Refresh()
+        {
+            OnCollectionChanged(new SynchronizedViewChangedEventArgs<T, TView>(NotifyCollectionChangedAction.Reset));
+        }
     }
 
     internal class ListNotifyCollectionChangedSynchronizedView<T, TView>
@@ -178,7 +183,7 @@ namespace ObservableCollections.Internal
                     return view.Count();
                 }
             }
-        }
+                }
 
         static bool IsCompatibleObject(object? value)
         {

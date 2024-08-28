@@ -82,10 +82,10 @@ namespace WpfApp
         private ObservableList<Item> sourceList;
         private readonly ItemsFilter _filter = new();
         private readonly ISynchronizedView<Item, Item> _synchronizedView;
-        private INotifyCollectionChangedSynchronizedView<Item> filteredView;
+        //private INotifyCollectionChangedSynchronizedView<Item> filteredView;
 
-        public INotifyCollectionChangedSynchronizedView<Item> FilteredView { get => filteredView; set => SetProperty(ref filteredView, value); }
-        //public INotifyCollectionChangedSynchronizedView<Item> FilteredView { get; set; }
+        //public INotifyCollectionChangedSynchronizedView<Item> FilteredView { get => filteredView; set => SetProperty(ref filteredView, value); }
+        public INotifyCollectionChangedSynchronizedView<Item> FilteredView { get; set; }
         public BindableReactiveProperty<int?> IdFilterText { get; } = new();
         public BindableReactiveProperty<string> NameFilterText { get; } = new();
 
@@ -154,8 +154,8 @@ namespace WpfApp
         {
             _filter.IdFilterText = IdFilterText.Value;
             _filter.NameFilterText = NameFilterText.Value;
-            //FilteredView.Refresh();
-            FilteredView = _synchronizedView.ToNotifyCollectionChanged(SynchronizationContextCollectionEventDispatcher.Current);
+            FilteredView.Refresh();
+            //FilteredView = _synchronizedView.ToNotifyCollectionChanged(SynchronizationContextCollectionEventDispatcher.Current);
         }
 
         private void AddToList()

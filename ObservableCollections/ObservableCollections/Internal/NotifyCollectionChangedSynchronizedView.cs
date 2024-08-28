@@ -173,6 +173,7 @@ namespace ObservableCollections.Internal
             }
             set => throw new NotSupportedException();
         }
+
         public override int Count
         {
             get
@@ -183,7 +184,7 @@ namespace ObservableCollections.Internal
                     return view.Count();
                 }
             }
-                }
+        }
 
         static bool IsCompatibleObject(object? value)
         {
